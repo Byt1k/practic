@@ -1,0 +1,86 @@
+.cooperation {
+    padding: 100px 0 80px;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 47px;
+    }
+
+    .item {
+        height: 465px;
+        border-radius: 25px;
+        background-color: #F2F4F8;
+        padding: 30px 17px 30px 30px;
+        transition: all .3s ease;
+
+        .number {
+            color: rgba(194, 194, 194, 0.21);
+            font-size: 188px;
+            font-weight: 500;
+            line-height: 100%;
+            text-align: right;
+            transition: all .3s ease;
+        }
+
+        h4 {
+            margin: 25px 0;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 130%;
+            color: #424242;
+            max-width: 370px;
+        }
+
+        &:hover {
+            background-color: #E1DE31;
+
+            .number {
+                color: rgba(255, 255, 255, 0.50);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .cooperation {
+        .grid {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item {
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .cooperation {
+        padding: 70px 0 0;
+
+        .grid {
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .item {
+            .number {
+                font-size: 120px;
+                line-height: 100%;
+            }
+
+            h4 {
+                margin: 15px 0;
+            }
+
+            p {
+                font-size: 15px;
+                line-height: 130%;
+            }
+        }
+    }
+}

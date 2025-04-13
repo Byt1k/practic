@@ -1,0 +1,221 @@
+.calculator {
+    padding: 100px 0 80px;
+
+    .wrapper {
+        margin-top: 47px;
+        display: grid;
+        grid-template: 480px / 1fr 420px 420px;
+        gap: 25px;
+        
+        .form {
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+
+            .field-square {
+                margin-top: 40px;
+                position: relative;
+
+                input[type="range"] {
+                    position: absolute;
+                    bottom: -3px;
+                    left: 10px;
+                    width: calc(100% - 20px);
+                }
+            }
+
+            .btn {
+                margin-top: auto;
+                width: 410px;
+            }
+        }
+
+        .amount {
+            border-radius: 15px;
+            background-color: #FFD5C3;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+
+            > span {
+                font-size: 20px;
+                line-height: 110%;
+                display: block;
+                max-width: 255px;
+            }
+
+            > h2 {
+                margin-top: 24px;
+            }
+
+            > p {
+                margin-top: auto;
+                line-height: 155%;
+                max-width: 280px;
+
+                b {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .commission {
+            border-radius: 15px;
+            background-color: #EE7E4E;
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                color: #FFF;
+            }
+
+            span {
+                font-size: 20px;
+                color: #FFF;
+            }
+
+            p {
+                color: #FFF;
+            }
+
+            .head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+
+            .part {
+                padding: 30px;
+
+                .bonus {
+                    margin-top: 40px;
+                    padding: 15px;
+                    background-color: #FFF;
+                    border-radius: 15px;
+
+                    > .head {
+                        align-items: flex-start;
+                    }
+
+                    h4 {
+                        color: #409E6C;
+                    }
+
+                    span {
+                        font-size: 16px;
+                        color: #242424;
+                        display: block;
+                        line-height: 138%;
+                    }
+
+                    p {
+                        color: #242424;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .full {
+                margin-top: auto;
+                padding: 35px 30px;
+                background-color: #409E6C;
+                border-radius: inherit;
+
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .calculator {
+        .wrapper {
+            grid-template: 480px / 390px 1fr 1fr;
+
+            .form {
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .calculator {
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .form {
+                max-width: 100%;
+
+                .btn {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .calculator {
+        padding: 70px 0 0;
+
+        .wrapper {
+            margin-top: 30px;
+            gap: 15px;
+
+            .form {
+                margin-bottom: 35px;
+
+                .field-square {
+                    margin-top: 25px;
+                }
+            }
+
+            .amount {
+                padding: 25px 20px;
+
+                span {
+                    font-size: 14px;
+                }
+
+                p {
+                    margin-top: 40px;
+                    font-size: 16px;
+                    line-height: 140%;
+                }
+            }
+
+            .commission {
+                span {
+                    font-size: 14px;
+                    line-height: 110%;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 155%;
+                }
+
+                .part {
+                    padding: 25px 20px;
+
+                    .bonus {
+                        span {
+                            line-height: 110%;
+                            margin-top: 10px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .full {
+                    padding: 25px 20px;
+                }
+            }
+        }
+    }
+}

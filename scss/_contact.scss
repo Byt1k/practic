@@ -1,0 +1,119 @@
+.contact {
+    padding: 100px 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .head {
+        width: 645px;
+
+        > p {
+            max-width: 570px;
+            margin: 37px 0 56px;
+        }
+
+        > img {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 25px;
+        }
+    }
+
+    .form {
+        padding: 50px 40px;
+        border-radius: 25px;
+        background-color: #F2F4F8;
+        width: 770px;
+
+        h2 {
+            margin-bottom: 22px;
+        }
+
+        .input {
+            margin-bottom: 40px;
+        }
+
+        .select {
+            margin-bottom: 50px;
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            p {
+                color: #707070;
+                font-size: 14px;
+                line-height: 112%;
+                max-width: 310px;
+
+                b {
+                    font-weight: 500;
+                    color: #242424;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contact {
+        .container {
+            flex-direction: column;
+        }
+
+        .head, .form {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .contact {
+        padding: 70px 0 90px;
+
+        .head {
+            p {
+                margin: 15px 0 30px;
+                font-size: 16px;
+                line-height: 126%;
+            }
+
+            img {
+                border-radius: 15px;
+            }
+        }
+
+        .form {
+            padding: 25px 15px;
+
+            h2 {
+                margin-bottom: 30px;
+            }
+
+            .input {
+                margin-bottom: 25px;
+            }
+
+            .select {
+                margin-bottom: 40px;
+            }
+
+            .action {
+                flex-direction: column-reverse;
+
+                p {
+                    text-align: center;
+                }
+
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

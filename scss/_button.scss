@@ -1,0 +1,40 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    height: 70px;
+    width: max-content;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    border-radius: 50px;
+
+    @media screen and (max-width: 760px) {
+        height: 56px;
+        font-size: 16px;
+    }
+
+    &.outlined {
+        border: 1px solid #E6E6E6;
+        background-color: transparent;
+        color: #242424;
+    }
+
+    &.green {
+        background-color: #409E6C;
+        color: #FFF;
+    }
+
+    &.orange {
+        background-color: #EE7E4E;
+        color: #FFF;
+    }
+
+    &.yellow {
+        color: #242424;
+        background-color: #E1DE31;
+    }
+}
+

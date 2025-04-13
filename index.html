@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практик</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="./img/logo.svg" alt="Практик">
+            </a>
+
+            <nav class="navigation">
+                <a href="#">о франшизе</a>
+                <a href="#">сотрудничество</a>
+                <a href="#">калькулятор</a>
+                <a href="#">рынки</a>
+                <a href="#">наши резиденты</a>
+            </nav>
+
+            <div class="actions">
+                <a href="#" class="actions__link">
+                    <img src="./img/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="#" class="actions__link">
+                    <img src="./img/tg.svg" alt="tg">
+                </a>
+                <a href="tel:+78003333845" class="btn outlined">
+                    +7 800 3333 845
+                </a>
+            </div>
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <header class="mobile-menu" id="mobile-menu">
+        <div class="container">
+            <nav class="navigation">
+                <a href="#">о франшизе</a>
+                <a href="#">сотрудничество</a>
+                <a href="#">калькулятор</a>
+                <a href="#">рынки</a>
+                <a href="#">наши резиденты</a>
+            </nav>
+            <div class="contacts">
+                <a href="tel:+78003333845">
+                    +7 800 3333 845
+                </a>
+                <a href="mailto:info@praktik.work">
+                    info@praktik.work
+                </a>
+            </div>
+            <div class="socials">
+                <a href="#" class="btn">
+                    <img src="./img/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="#" class="btn">
+                    <img src="./img/tg.svg" alt="tg">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <h1>Франшиза коворкинга <br>/ сервисного офиса</h1>
+            <p>Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
+            <button class="btn yellow" onclick="toggleOpenPopup()">
+                Оставить заявку
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <path d="M0.46371 12.7674C0.0112506 13.2199 0.0112506 13.9535 0.46371 14.4059C0.916169 14.8584 1.64975 14.8584 2.10221 14.4059L0.46371 12.7674ZM14.0275 2.00073C14.0275 1.36086 13.5088 0.842139 12.8689 0.842139H2.44155C1.80168 0.842139 1.28296 1.36086 1.28296 2.00073C1.28296 2.64061 1.80168 3.15933 2.44155 3.15933H11.7103V12.4281C11.7103 13.0679 12.229 13.5867 12.8689 13.5867C13.5088 13.5867 14.0275 13.0679 14.0275 12.4281V2.00073ZM2.10221 14.4059L13.6881 2.81998L12.0496 1.18148L0.46371 12.7674L2.10221 14.4059Z" fill="#E1DE31"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </main>
+
+    <section class="coworkings">
+        <div class="container">
+            <div class="head">
+                <h1>Наши коворкинги</h1>
+
+                <div class="swiper-navigation coworkings__navigation">
+                    <button class="prev">
+                        <img src="./img/arrow-left.svg" alt="prev">
+                    </button>
+                    <div class="coworkings__pagination"></div>
+                    <button class="next">
+                        <img src="./img/arrow-right.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper coworkings__slider">
+                <div class="swiper-wrapper">
+                  
+                    <div class="swiper-slide coworking-item">
+                        <div class="image" style="background-image: url(./img/mock/coworking.png);"></div>
+                        <div class="content">
+                            <h3>Дело</h3>
+                            <div class="coworking-item__address">
+                                <img src="./img/pointer.svg" alt="pointer">
+                                <p>Санкт-Петербург, Малоохтинский пр., 68</p>
+                            </div>
+                            <div class="coworking-item__features">
+                                <p>
+                                    <span>Общая площадь</span>
+                                    4650 м²
+                                </p>
+                                <p>
+                                    <span>Количество мест</span>
+                                    951 место
+                                </p>
+                                <p>
+                                    <span>Переговорные</span>
+                                    11 шт.
+                                </p>
+                            </div>
+                            <p class="coworking-item__price">
+                                <span>от 30 000 ₽</span> в месяц
+                            </p>
+                            <div class="coworking-item__actions">
+                                <button class="btn green">
+                                    предпросмотр
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                                        <path d="M1 7C0.447715 7 4.82823e-08 7.44772 0 8C-4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM21.7071 8.70711C22.0976 8.31658 22.0976 7.68342 21.7071 7.2929L15.3431 0.928933C14.9526 0.538409 14.3195 0.538409 13.9289 0.928933C13.5384 1.31946 13.5384 1.95262 13.9289 2.34315L19.5858 8L13.9289 13.6569C13.5384 14.0474 13.5384 14.6805 13.9289 15.0711C14.3195 15.4616 14.9526 15.4616 15.3431 15.0711L21.7071 8.70711ZM1 9L21 9L21 7L1 7L1 9Z" fill="white"/>
+                                    </svg>
+                                </button>
+                                <button class="btn orange">
+                                    3D тур локации
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
+                                        <path d="M1 7C0.447715 7 4.82823e-08 7.44772 0 8C-4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM21.7071 8.70711C22.0976 8.31658 22.0976 7.68342 21.7071 7.2929L15.3431 0.928933C14.9526 0.538409 14.3195 0.538409 13.9289 0.928933C13.5384 1.31946 13.5384 1.95262 13.9289 2.34315L19.5858 8L13.9289 13.6569C13.5384 14.0474 13.5384 14.6805 13.9289 15.0711C14.3195 15.4616 14.9526 15.4616 15.3431 15.0711L21.7071 8.70711ZM1 9L21 9L21 7L1 7L1 9Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h1>О франшизе</h1>
+            <p class="text">Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
+        
+            <div class="grid">
+                <div class="item">
+                    <p>от 0 ₽</p>
+                    <span>паушальный взнос</span>
+                </div>
+                <div class="item">
+                    <p>от 1000 м²</p>
+                    <span>площадь коворкинга</span>
+                </div>
+                <div class="item">
+                    <p>от 2,5 лет</p>
+                    <span>возврат инвестиций</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cooperation">
+        <div class="container">
+            <h1>Форматы сотрудничества</h1>
+            <div class="grid">
+                <div class="item">
+                    <div class="number">01</div>
+                    <h4>Франшиза</h4>
+                    <p>если вы хотите получить готовую бизнес-модель без привязки к конкретному зданию</p>
+                </div>
+                <div class="item">
+                    <div class="number">02</div>
+                    <h4>Консалтинг</h4>
+                    <p>если у вас уже есть свой коворкинг, но вы хотите улучшить показатели</p>
+                </div>
+                <div class="item">
+                    <div class="number">03</div>
+                    <h4>Инвестиции</h4>
+                    <p>если у вас есть своё помещение / здание, но вы хотите повысить выручку с кв.м. или вы хотите получать пассивный доход</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculator">
+        <div class="container">
+            <h1>Калькулятор</h1>
+            
+            <div class="wrapper">
+                <div class="form">
+                    <div class="select">
+                        <select class="select">
+                            <option value="">Москва</option>
+                            <option value="">Санкт-Петербург</option>
+                        </select>
+                    </div>
+                    <div class="field-square">
+                        <div class="input">
+                            <label>Площадь</label>
+                            <input type="text" disabled="true" value="100" oninput="squareValueOnChange(event)" id="square-value">
+                        </div>
+                        <input type="range" min="0" max="200" value="100" oninput="squareRangeOnChange(event)" id="square-range" class="input-range">
+                    </div>
+                    <button class="btn green">получить полный анализ</button>
+                </div>
+
+                <div class="amount">
+                    <span>предполагаемая сумма контракта</span>
+                    <h2>420 000 ₽/мес</h2>
+                    <p><b>10 рабочих мест</b> на выбранной локации по <b>42 000 ₽/мес</b> </p>
+                </div>
+                
+                <div class="commission">
+                    <div class="part">
+                        <div class="head">
+                            <div>
+                                <h2>504 000 ₽</h2>
+                                <span>базовая комиссия</span>
+                            </div>
+                            <p>8,33%</p>
+                        </div>
+                        <div class="bonus">
+                            <div class="head">
+                                <div>
+                                    <h4>+ 30 000 ₽</h4>
+                                    <span>бонус за 2 обеспечительных платежа (не в зачет аренды)</span>
+                                </div>
+                                <p>1%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="full">
+                        <div class="head">
+                            <div>
+                                <h2>534 000 ₽</h2>
+                                <span>полная комиссия</span>
+                            </div>
+                            <p>9,33%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sources">
+        <div class="container">
+            <h1>Источники дохода</h1>
+            <p class="text">Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
+            <div class="wrapper">
+                <div class="left">
+                    <div class="progressbar">
+                        <p>
+                            <span>92%</span>
+                            <span>Аренда рабочих мест</span>
+                        </p>
+                        <div class="scale">
+                            <div style="width: 92%;"></div>
+                        </div>
+                    </div>
+                    <div class="progressbar">
+                        <p>
+                            <span>5%</span>
+                            <span>Аренда переговорных комнат</span>
+                        </p>
+                        <div class="scale">
+                            <div style="width: 5%;"></div>
+                        </div>
+                    </div>
+                    <div class="progressbar">
+                        <p>
+                            <span>3%</span>
+                            <span>Предоставление юр.адресов, фотосессии в коворкинге</span>
+                        </p>
+                        <div class="scale">
+                            <div style="width: 3%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="parent">
+                        <p>80%</p>
+                        <span>B2B резидентов</span>
+                    </div>
+                    <div class="child">
+                        <p>80% <span>из них</span></p>
+                        <span>корпоративные клиенты</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="container">
+            <h1>Почему с нами выгодно</h1>
+            <div class="head">
+                <p>При реализации проекта с нашей компанией, франчайзи Практик получают возможность открыть коворкинг выгодно!</p>
+                <div>
+                    <span>Общая экономия инвестиций в проект от:</span>
+                    <p>4,5 млн руб</p>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="left">
+                    <h2>Экономия на проектировании</h2>
+                    <p>Вы получаете современные дизайн-решения и пространства, которые заточены под бизнес-процессы сервисного офиса (коворкинга)</p>
+                    <ul>
+                        <li>Комплексное проектирование, включающее дизайн, архитектуру, инженерные системы и сети, BIM – проектирование, ускоряющее сроки проектирования, и уменьшающее количество нестыковок и коллизий в реализации</li>
+                        <li>Адаптация под локацию и специфику объекта</li>
+                        <li>Плотное взаимодействие с комплектацией и строительством объекта</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="price">
+                        <p class="old">2 500 ₽ м2</p>
+                        <p class="current">1 750 ₽ м2</p>
+                        <span>за весь комплекс услуг</span>
+                    </div>
+                    <div class="features">
+                        <div>
+                            <span>Площадь</span>
+                            <span>Экономия</span>
+                        </div>
+                        <div>
+                            <p>500 м2</p>
+                            <b>375 тыс. ₽</b>
+                        </div>
+                        <div>
+                            <p>1000 м2</p>
+                            <b>750 тыс. ₽</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="left">
+                    <h2>Экономия на IT-решениях</h2>
+                    <p>Вы получаете современные дизайн-решения и пространства, которые заточены под бизнес-процессы сервисного офиса (коворкинга)</p>
+                    <ul>
+                        <li>Комплексное проектирование, включающее дизайн, архитектуру, инженерные системы и сети, BIM – проектирование, ускоряющее сроки проектирования, и уменьшающее количество нестыковок и коллизий в реализации</li>
+                        <li>Адаптация под локацию и специфику объекта</li>
+                        <li>Плотное взаимодействие с комплектацией и строительством объекта</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="price">
+                        <p class="old">2 500 ₽ м2</p>
+                        <p class="current">1 750 ₽ м2</p>
+                        <span>за весь комплекс услуг</span>
+                    </div>
+                    <div class="features">
+                        <div>
+                            <span>Площадь</span>
+                            <span>Экономия</span>
+                        </div>
+                        <div>
+                            <p>500 м2</p>
+                            <b>375 тыс. ₽</b>
+                        </div>
+                        <div>
+                            <p>1000 м2</p>
+                            <b>750 тыс. ₽</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="left">
+                    <h2>Экономия на строительстве</h2>
+                    <p>Вы получаете современные дизайн-решения и пространства, которые заточены под бизнес-процессы сервисного офиса (коворкинга)</p>
+                    <ul>
+                        <li>Комплексное проектирование, включающее дизайн, архитектуру, инженерные системы и сети, BIM – проектирование, ускоряющее сроки проектирования, и уменьшающее количество нестыковок и коллизий в реализации</li>
+                        <li>Адаптация под локацию и специфику объекта</li>
+                        <li>Плотное взаимодействие с комплектацией и строительством объекта</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <div class="price">
+                        <p class="old">2 500 ₽ м2</p>
+                        <p class="current">1 750 ₽ м2</p>
+                        <span>за весь комплекс услуг</span>
+                    </div>
+                    <div class="features">
+                        <div>
+                            <span>Площадь</span>
+                            <span>Экономия</span>
+                        </div>
+                        <div>
+                            <p>500 м2</p>
+                            <b>375 тыс. ₽</b>
+                        </div>
+                        <div>
+                            <p>1000 м2</p>
+                            <b>750 тыс. ₽</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="regions">
+        <div class="container">
+            <h1>Доступные регионы</h1>
+            <div class="wrapper">
+                <h4>Все регионы</h4>
+                <div class="input input_search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M18.4816 18.4288L12.6619 12.6071M14.4839 8.20363C14.4839 9.85645 13.8275 11.4416 12.6592 12.6103C11.4909 13.779 9.90638 14.4356 8.25415 14.4356C6.60192 14.4356 5.01736 13.779 3.84906 12.6103C2.68076 11.4416 2.02441 9.85645 2.02441 8.20363C2.02441 6.55082 2.68076 4.9657 3.84906 3.79698C5.01736 2.62826 6.60192 1.97168 8.25415 1.97168C9.90638 1.97168 11.4909 2.62826 12.6592 3.79698C13.8275 4.9657 14.4839 6.55082 14.4839 8.20363Z" stroke="#707070" stroke-width="2.12411" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" placeholder="Поиск города...">
+                </div>
+                <div class="filter" id="regions-list"></div>
+                <div class="result" id="cities-list"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="residents">
+        <div class="container">
+            <div class="head">
+                <h1>Наши резиденты</h1>
+                <div class="swiper-navigation residents__navigation">
+                    <button class="prev">
+                        <img src="./img/arrow-left.svg" alt="prev">
+                    </button>
+                    <div class="residents__pagination"></div>
+                    <button class="next">
+                        <img src="./img/arrow-right.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper residents__slider">
+                <div class="swiper-wrapper">
+                  
+                    <div class="swiper-slide">
+                        <div class="residents__item">
+                            <img src="./img/mock/resident.png" alt="logo">
+                        </div>
+                        <div class="residents__item">
+                            <img src="./img/mock/resident.png" alt="logo">
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 2
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 3
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 4
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 5
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="awards">
+        <div class="container">
+            <div class="head">
+                <h1>Наши награды</h1>
+                <div class="swiper-navigation awards__navigation">
+                    <button class="prev">
+                        <img src="./img/arrow-left.svg" alt="prev">
+                    </button>
+                    <div class="awards__pagination"></div>
+                    <button class="next">
+                        <img src="./img/arrow-right.svg" alt="next">
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper awards__slider">
+                <div class="swiper-wrapper">
+                  
+                    <div class="swiper-slide awards-item">
+                        <div class="awards-item__image">
+                            <div>
+                                <img src="./img/mock/award.png" alt="award">
+                            </div>
+                        </div>
+                        <p>Сеть коворкингов Практик</p>
+                        <h4>GRAND-сеть</h4>
+                        <span>2024</span>
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 2
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 3
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 4
+                    </div>
+
+                    <div class="swiper-slide">
+                        Slide 5
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="head">
+                <h1>Оставить заявку</h1>
+                <p>Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
+                <img src="./img/form-image.png" alt="coworking">
+            </div>
+            <div class="form">
+                <h2>
+                    Заполните форму <br>
+                    для получения предложения
+                </h2>
+                <div class="input">
+                    <label>Ваше имя*</label>
+                    <input type="text" placeholder="Иванов Иван Иванович">
+                </div>
+                <div class="input">
+                    <label>Телефон*</label>
+                    <input type="text" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                </div>
+                <div class="input">
+                    <label>Почта</label>
+                    <input type="text" placeholder="example@gmail.com">
+                </div>
+                <div class="select">
+                    <label>Город*</label>
+                    <select>
+                        <option value="">Москва</option>
+                        <option value="">Санкт-Петербург</option>
+                    </select>
+                </div>
+                <div class="action">
+                    <button class="btn yellow">Получить предложение</button>
+                    <p>Нажимая кнопку Оставить заявку, вы соглашаетесь с <b>политикой обработки персональных данных</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+           <p class="head">Контакты</p>
+            <div class="contacts">
+                <a href="mailto:info@praktik.work">info@praktik.work</a>
+                <a href="tel:+78003333845">+7 800 3333 845</a>
+            </div>
+            <div class="socials">
+                <a href="#">
+                    <img src="./img/whatsapp.svg" alt="whatsapp">
+                </a>
+                <a href="#">
+                    <img src="./img/tg.svg" alt="tg">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popup" id="popup">
+        <div class="container">
+            <div class="head">
+                <img src="./img/logo-white.svg" alt="logo" class="logo">
+                <div class="actions">
+                    <a href="mailto:info@praktik.work" class="btn outlined">info@praktik.work</a>
+                    <a href="telto:+1 234 567-89-00" class="btn outlined">+1 234 567-89-00</a>
+                    <button class="btn white" onclick="toggleOpenPopup()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+                            <path d="M11.5 13.3417L6.80418 18.0375C6.62849 18.2132 6.40488 18.301 6.13335 18.301C5.86182 18.301 5.63821 18.2132 5.46252 18.0375C5.28682 17.8618 5.19897 17.6382 5.19897 17.3667C5.19897 17.0951 5.28682 16.8715 5.46252 16.6958L10.1583 12L5.46252 7.30417C5.28682 7.12847 5.19897 6.90486 5.19897 6.63333C5.19897 6.36181 5.28682 6.1382 5.46252 5.9625C5.63821 5.78681 5.86182 5.69896 6.13335 5.69896C6.40488 5.69896 6.62849 5.78681 6.80418 5.9625L11.5 10.6583L16.1958 5.9625C16.3715 5.78681 16.5952 5.69896 16.8667 5.69896C17.1382 5.69896 17.3618 5.78681 17.5375 5.9625C17.7132 6.1382 17.8011 6.36181 17.8011 6.63333C17.8011 6.90486 17.7132 7.12847 17.5375 7.30417L12.8417 12L17.5375 16.6958C17.7132 16.8715 17.8011 17.0951 17.8011 17.3667C17.8011 17.6382 17.7132 17.8618 17.5375 18.0375C17.3618 18.2132 17.1382 18.301 16.8667 18.301C16.5952 18.301 16.3715 18.2132 16.1958 18.0375L11.5 13.3417Z" fill="#242424"/>
+                        </svg>
+                        Закрыть
+                    </button>
+                </div>
+            </div>
+            <form class="form">
+                <h1>Оставить заявку</h1>
+                <p>Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
+                <div class="grid">
+                    <div class="input">
+                        <input type="text" placeholder="Ваше имя*">
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Телефон*">
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Почта*">
+                    </div>
+                    <div class="select">
+                        <select>
+                            <option>Москва</option>
+                            <option>Санкт-Петербург</option>
+                        </select>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="Комментарий">
+                    </div>
+                </div>
+                <span>Нажимая кнопку Оставить заявку, вы соглашаетесь с <b>политикой обработки персональных данных</b></span>
+                <button class="btn yellow">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

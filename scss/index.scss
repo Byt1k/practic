@@ -1,0 +1,110 @@
+@use "reset";
+
+@use "button";
+@use "select";
+@use "input";
+@use "range";
+@use "swiper";
+@use "popup";
+
+@use "header";
+@use "main";
+@use "coworkings";
+@use "about";
+@use "cooperation";
+@use "calculator";
+@use "sources";
+@use "advantages";
+@use "regions";
+@use "residents";
+@use "awards";
+@use "contact";
+@use "footer";
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 400;
+
+    &.hidden {
+        overflow: hidden;
+    }
+}
+
+* {
+    color: #242424;
+}
+
+.container {
+    width: 1480px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+h4 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@media screen and (max-width: 1500px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 920px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 100%;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 100%;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 100%;
+    }
+
+    h4 {
+        font-size: 24px;
+        line-height: 100%;
+    }
+}
