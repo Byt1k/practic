@@ -201,3 +201,27 @@ burgerEl.onclick = function(e) {
     mobileMenu.classList.toggle('active')
     document.body.classList.toggle('hidden')
 }
+
+// Навигация
+document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        const isMobileLink = !!this.closest('.mobile-menu')
+        
+        if (isMobileLink) {
+            burgerEl.classList.toggle('active')
+            mobileMenu.classList.toggle('active')
+            document.body.classList.toggle('hidden')
+        }
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
