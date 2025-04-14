@@ -38,6 +38,17 @@
     }
 }
 
+@media screen and (max-width: 1700px) {
+    .footer {
+        .contacts {
+            a {
+                font-size: 34px;
+            }
+
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .footer {
         .contacts {

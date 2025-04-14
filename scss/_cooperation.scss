@@ -45,6 +45,30 @@
     }
 }
 
+@media screen and (max-width: 1700px) {
+    .cooperation {
+        .grid {
+            margin-top: 38px;
+        }
+
+        .item {
+            height: 377px;
+            
+            .number {
+                font-size: 152px;
+            }
+
+            h4 {
+                margin: 20px 0;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .cooperation {
         .grid {

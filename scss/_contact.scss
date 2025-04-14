@@ -60,6 +60,62 @@
     }
 }
 
+@media screen and (max-width: 1700px) {
+    .contact {
+        .head {
+            width: 520px;
+
+            p {
+                font-size: 20px;
+                line-height: 126%;
+                margin: 30px 0 40px;
+            }
+        }
+
+        .form {
+            padding: 30px;
+
+            .input, .select {
+                gap: 8px;
+
+                label {
+                    font-size: 20px;
+                }
+            }
+
+            .input {
+                margin-bottom: 30px;
+
+                input {
+                    height: 56px;
+                    font-size: 20px;
+                }
+            }
+
+            .select {
+                margin-bottom: 40px;
+
+                select {
+                    height: 56px;
+                    font-size: 20px;
+                    padding: 10px 20px;
+                }
+
+                &::after {
+                    bottom: 12px;
+                }
+            }
+
+            .action {
+                .btn {
+                    font-size: 14px;
+                    height: 54px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .contact {
         .container {

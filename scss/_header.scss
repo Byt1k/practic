@@ -111,7 +111,45 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
+    .header {
+        .logo {
+            max-width: 190px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .navigation {
+            gap: 25px;
+
+            a {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .actions {
+            &__link {
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .btn {
+                height: 40px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .header {
         height: 70px;
 
@@ -121,10 +159,6 @@
 
         .logo {
             max-width: 160px;
-
-            img {
-                width: 100%;
-            }
         }
 
         .navigation, .actions {

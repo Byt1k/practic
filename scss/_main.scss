@@ -35,7 +35,28 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
+    .main {
+        .container {
+            padding: 315px 50px 50px;
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 126%;
+            max-width: 665px;
+            margin: 16px 0 70px;
+        }
+
+        .btn {
+            width: 240px;
+            height: 55px;
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .main {
         .container {
             padding-top: 285px;
@@ -52,7 +73,6 @@
 
         p {
             font-size: 15px;
-            line-height: 126%;
             margin: 10px 0 30px;
         }
 

@@ -171,9 +171,6 @@ p {
 }
 
 @media screen and (max-width: 760px) {
-  .select {
-    gap: 10px;
-  }
   .select label {
     font-size: 13px;
   }
@@ -419,7 +416,7 @@ p {
   width: 270px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
   .popup {
     padding-top: 20px;
   }
@@ -573,7 +570,34 @@ p {
   background-color: #242424;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
+  .header .logo {
+    max-width: 190px;
+  }
+  .header .logo img {
+    width: 100%;
+  }
+  .header .navigation {
+    gap: 25px;
+  }
+  .header .navigation a {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .header .actions__link {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+  .header .actions__link img {
+    max-width: 100%;
+  }
+  .header .actions .btn {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .header {
     height: 70px;
   }
@@ -582,9 +606,6 @@ p {
   }
   .header .logo {
     max-width: 160px;
-  }
-  .header .logo img {
-    width: 100%;
   }
   .header .navigation, .header .actions {
     display: none;
@@ -646,7 +667,23 @@ p {
   background-color: #242424;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
+  .main .container {
+    padding: 315px 50px 50px;
+  }
+  .main p {
+    font-size: 22px;
+    line-height: 126%;
+    max-width: 665px;
+    margin: 16px 0 70px;
+  }
+  .main .btn {
+    width: 240px;
+    height: 55px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .main .container {
     padding-top: 285px;
   }
@@ -658,7 +695,6 @@ p {
   }
   .main p {
     font-size: 15px;
-    line-height: 126%;
     margin: 10px 0 30px;
   }
   .main .btn {
@@ -749,6 +785,45 @@ p {
   width: 315px;
 }
 
+@media screen and (max-width: 1700px) {
+  .coworking-item .image {
+    height: 355px;
+  }
+  .coworking-item .content {
+    padding: 25px;
+  }
+  .coworking-item__address {
+    margin-top: 13px;
+    font-size: 17px;
+  }
+  .coworking-item__address img {
+    max-width: 30px;
+  }
+  .coworking-item__features {
+    margin: 20px 0 25px;
+    padding: 25px 0;
+    gap: 20px;
+  }
+  .coworking-item__features p {
+    font-size: 20px;
+    line-height: 100%;
+  }
+  .coworking-item__features p span {
+    font-size: 20px;
+  }
+  .coworking-item__price {
+    font-size: 18px;
+  }
+  .coworking-item__price span {
+    font-size: 28px;
+  }
+  .coworking-item__actions {
+    margin-top: 36px;
+  }
+  .coworking-item__actions .btn {
+    font-size: 15px;
+  }
+}
 @media screen and (max-width: 760px) {
   .coworkings {
     padding: 70px 0 0;
@@ -839,6 +914,29 @@ p {
   line-height: 126%;
 }
 
+@media screen and (max-width: 1700px) {
+  .about .text {
+    max-width: 712px;
+    font-size: 22px;
+    line-height: 126%;
+  }
+  .about .grid {
+    margin-top: 57px;
+    gap: 12px;
+  }
+  .about .item {
+    height: 160px;
+    gap: 7px;
+  }
+  .about .item p {
+    font-size: 38px;
+    line-height: 126%;
+  }
+  .about .item span {
+    font-size: 20px;
+    line-height: 126%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .about .grid {
     grid-template-columns: 1fr 1fr;
@@ -853,7 +951,6 @@ p {
   }
   .about .text {
     font-size: 15px;
-    line-height: 126%;
     margin-top: 15px;
   }
   .about .grid {
@@ -914,6 +1011,23 @@ p {
   color: rgba(255, 255, 255, 0.5);
 }
 
+@media screen and (max-width: 1700px) {
+  .cooperation .grid {
+    margin-top: 38px;
+  }
+  .cooperation .item {
+    height: 377px;
+  }
+  .cooperation .item .number {
+    font-size: 152px;
+  }
+  .cooperation .item h4 {
+    margin: 20px 0;
+  }
+  .cooperation .item p {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .cooperation .grid {
     display: flex;
@@ -1048,12 +1162,62 @@ p {
   border-radius: inherit;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
   .calculator .wrapper {
-    grid-template: 480px/390px 1fr 1fr;
+    margin-top: 38px;
+    gap: 20px;
+    grid-template: 390px/1fr 340px 340px;
   }
-  .calculator .wrapper .form .btn {
-    width: 100%;
+  .calculator .wrapper .form {
+    margin-right: 50px;
+  }
+  .calculator .wrapper .form .select select {
+    font-size: 20px;
+    height: 64px;
+    padding: 20px 20px;
+  }
+  .calculator .wrapper .form .select::after {
+    bottom: 17px;
+  }
+  .calculator .wrapper .form .field-square {
+    margin-top: 40px;
+  }
+  .calculator .wrapper .form .input input {
+    font-size: 20px;
+    height: 64px;
+  }
+  .calculator .wrapper .form .select, .calculator .wrapper .form .input {
+    gap: 10px;
+  }
+  .calculator .wrapper .form .select label, .calculator .wrapper .form .input label {
+    font-size: 20px;
+  }
+  .calculator .wrapper .amount {
+    padding: 25px;
+  }
+  .calculator .wrapper .amount span {
+    font-size: 16px;
+  }
+  .calculator .wrapper .amount p {
+    font-size: 20px;
+    max-width: 230px;
+  }
+  .calculator .wrapper .commission span {
+    font-size: 16px;
+  }
+  .calculator .wrapper .commission p {
+    font-size: 20px;
+    line-height: 155%;
+  }
+  .calculator .wrapper .commission .part {
+    padding: 25px;
+  }
+  .calculator .wrapper .commission .part .bonus span {
+    font-size: 14px;
+    line-height: 110%;
+  }
+  .calculator .wrapper .commission .full {
+    padding: 25px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1215,9 +1379,49 @@ p {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
+  .sources .text {
+    max-width: 710px;
+    font-size: 22px;
+    line-height: 126%;
+    margin-top: 13px;
+  }
   .sources .wrapper {
-    grid-template-columns: 600px 1fr;
+    grid-template-columns: 750px 1fr;
+    margin-top: 80px;
+  }
+  .sources .left {
+    gap: 50px;
+  }
+  .sources .progressbar p span:first-child {
+    font-size: 48px;
+  }
+  .sources .progressbar p span:last-child {
+    font-size: 20px;
+  }
+  .sources .progressbar .scale {
+    margin-top: 0;
+    height: 12px;
+  }
+  .sources .right .parent {
+    padding: 32px 25px;
+  }
+  .sources .right .parent p {
+    font-size: 48px;
+  }
+  .sources .right .parent span {
+    font-size: 28px;
+  }
+  .sources .right .child {
+    width: 260px;
+    height: 150px;
+  }
+  .sources .right .child p {
+    font-size: 38px;
+  }
+  .sources .right .child span {
+    font-size: 20px;
+    line-height: 100%;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1246,7 +1450,6 @@ p {
   .sources .text {
     margin-top: 15px;
     font-size: 15px;
-    line-height: 126%;
   }
   .sources .wrapper {
     margin-top: 30px;
@@ -1407,9 +1610,73 @@ p {
   line-height: 130%;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
+  .advantages .head > p {
+    font-size: 22px;
+  }
+  .advantages .head > div {
+    padding: 28px 24px;
+    min-width: 620px;
+    gap: 30px;
+  }
+  .advantages .head > div p {
+    font-size: 38px;
+    line-height: 130%;
+    white-space: nowrap;
+  }
+  .advantages .head > div span {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  .advantages .wrapper {
+    padding: 40px;
+    grid-template-columns: 660px 1fr;
+    gap: 80px;
+  }
+  .advantages .left > p {
+    font-size: 20px;
+    max-width: 660px;
+    line-height: 130%;
+    margin: 20px 0 37px;
+  }
+  .advantages .left ul {
+    font-size: 20px;
+    line-height: 130%;
+    gap: 20px;
+  }
+  .advantages .left ul li::before {
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+  }
+  .advantages .right .price .old {
+    font-size: 26px;
+  }
+  .advantages .right .price .current {
+    font-size: 42px;
+    line-height: 110%;
+  }
+  .advantages .right .price span {
+    font-size: 16px;
+  }
+  .advantages .right .features {
+    gap: 15px;
+    margin-top: 100px;
+  }
+  .advantages .right .features > div > span {
+    font-size: 20px;
+  }
+  .advantages .right .features > div > p, .advantages .right .features > div > b {
+    width: auto;
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1200px) {
   .advantages .head {
     flex-direction: column;
+  }
+  .advantages .head > div {
+    min-width: auto;
   }
   .advantages .wrapper {
     display: flex;
@@ -1806,6 +2073,47 @@ p {
   color: #242424;
 }
 
+@media screen and (max-width: 1700px) {
+  .contact .head {
+    width: 520px;
+  }
+  .contact .head p {
+    font-size: 20px;
+    line-height: 126%;
+    margin: 30px 0 40px;
+  }
+  .contact .form {
+    padding: 30px;
+  }
+  .contact .form .input, .contact .form .select {
+    gap: 8px;
+  }
+  .contact .form .input label, .contact .form .select label {
+    font-size: 20px;
+  }
+  .contact .form .input {
+    margin-bottom: 30px;
+  }
+  .contact .form .input input {
+    height: 56px;
+    font-size: 20px;
+  }
+  .contact .form .select {
+    margin-bottom: 40px;
+  }
+  .contact .form .select select {
+    height: 56px;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+  .contact .form .select::after {
+    bottom: 12px;
+  }
+  .contact .form .action .btn {
+    font-size: 14px;
+    height: 54px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .contact .container {
     flex-direction: column;
@@ -1883,6 +2191,11 @@ p {
   background-color: #242424;
 }
 
+@media screen and (max-width: 1700px) {
+  .footer .contacts a {
+    font-size: 34px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .footer .contacts {
     flex-direction: column;
@@ -1941,9 +2254,21 @@ h4 {
   line-height: normal;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
   .container {
-    width: 1140px;
+    width: 1180px;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 1200px) {

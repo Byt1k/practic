@@ -128,14 +128,84 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
     .calculator {
         .wrapper {
-            grid-template: 480px / 390px 1fr 1fr;
+            margin-top: 38px;
+            gap: 20px;
+            grid-template: 390px / 1fr 340px 340px;
 
             .form {
-                .btn {
-                    width: 100%;
+                margin-right: 50px;
+
+                .select {
+                    select {
+                        font-size: 20px;
+                        height: 64px;
+                        padding: 20px 20px;
+                    }
+
+                    &::after {
+                        bottom: 17px;
+                    }
+                }
+
+                .field-square {
+                    margin-top: 40px;
+                }
+
+                .input {
+                    input {
+                        font-size: 20px;
+                        height: 64px;
+                    }
+                }
+
+                .select, .input {
+                    gap: 10px;
+
+                    label {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .amount {
+                padding: 25px;
+
+                span {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 20px;
+                    max-width: 230px;
+                }
+            }
+
+            .commission {
+                span {
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 155%;
+                }
+
+                .part {
+                    padding: 25px;
+
+                    .bonus {
+                        span {
+                            font-size: 14px;
+                            line-height: 110%;
+                        }
+                    }
+                }
+
+                .full {
+                    padding: 25px;
                 }
             }
         }

@@ -126,10 +126,103 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
+    .advantages {
+        .head {
+            > p {
+                font-size: 22px;
+            }
+
+            > div {
+                padding: 28px 24px;
+                min-width: 620px;
+                gap: 30px;
+
+                p {
+                    font-size: 38px;
+                    line-height: 130%;
+                    white-space: nowrap;
+                }
+
+                span {
+                    font-size: 20px;
+                    line-height: 130%;
+                }
+            }
+        }
+
+        .wrapper {
+            padding: 40px;
+            grid-template-columns: 660px 1fr;
+            gap: 80px;
+        }
+        
+        .left {
+            > p {
+                font-size: 20px;
+                max-width: 660px;
+                line-height: 130%;
+                margin: 20px 0 37px;
+            }       
+
+            ul {
+                font-size: 20px;
+                line-height: 130%;
+                gap: 20px;
+
+                li {
+                    &::before {
+                        width: 16px;
+                        min-width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+
+        .right {
+            .price {
+                .old {
+                    font-size: 26px;
+                }
+
+                .current {
+                    font-size: 42px;
+                    line-height: 110%;
+                }
+
+                span {
+                    font-size: 16px;
+                }
+            }
+
+            .features {
+                gap: 15px;
+                margin-top: 100px;
+
+                > div {
+                    > span {
+                        font-size: 20px;
+                    }
+
+                    > p, > b {
+                        width: auto;
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .advantages {
         .head {
             flex-direction: column;
+
+            > div {
+                min-width: auto;
+            }
         }
 
         .wrapper {

@@ -33,6 +33,36 @@
     }
 }
 
+@media screen and (max-width: 1700px) {
+    .about {
+        .text {
+            max-width: 712px;
+            font-size: 22px;
+            line-height: 126%;
+        }
+
+        .grid {
+            margin-top: 57px;
+            gap: 12px;
+        }
+
+        .item {
+            height: 160px;
+            gap: 7px;
+
+            p {
+                font-size: 38px;
+                line-height: 126%;
+            }
+
+            span {
+                font-size: 20px;
+                line-height: 126%;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .about {
         .grid {
@@ -51,7 +81,6 @@
 
         .text {
             font-size: 15px;
-            line-height: 126%;
             margin-top: 15px;
         }
 

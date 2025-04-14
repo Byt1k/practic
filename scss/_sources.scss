@@ -118,10 +118,69 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1700px) {
     .sources {
+        .text {
+            max-width: 710px;
+            font-size: 22px;
+            line-height: 126%;
+            margin-top: 13px;
+        }
+
         .wrapper {
-            grid-template-columns: 600px 1fr;
+            grid-template-columns: 750px 1fr;
+            margin-top: 80px;
+        }
+
+        .left {
+            gap: 50px;
+        }
+
+        .progressbar {
+            p {
+                span {
+                    &:first-child {
+                        font-size: 48px;
+                    }
+
+                    &:last-child {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .scale {
+                margin-top: 0;
+                height: 12px;
+            }
+        }
+
+        .right {
+            .parent {
+                padding: 32px 25px;
+
+                p {
+                    font-size: 48px;
+                }
+
+                span {
+                    font-size: 28px;
+                }
+            }
+
+            .child {
+                width: 260px;
+                height: 150px;
+
+                p {
+                    font-size: 38px;
+                }
+
+                span {
+                    font-size: 20px;
+                    line-height: 100%;
+                }
+            }
         }
     }
 }
@@ -158,7 +217,6 @@
         .text {
             margin-top: 15px;
             font-size: 15px;
-            line-height: 126%;
         }
 
         .wrapper {
