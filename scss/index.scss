@@ -65,6 +65,20 @@ h4 {
     line-height: normal;
 }
 
+#backToTopBtn {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    cursor: pointer;
+    height: 40px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
 @media screen and (max-width: 1700px) {
     .container {
         width: 1180px;

@@ -135,7 +135,7 @@
                             </p>
                             <div class="coworking-item__actions">
                                 <button class="btn green">
-                                    предпросмотр
+                                    подробнее
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16" viewBox="0 0 22 16" fill="none">
                                         <path d="M1 7C0.447715 7 4.82823e-08 7.44772 0 8C-4.82823e-08 8.55228 0.447715 9 1 9L1 7ZM21.7071 8.70711C22.0976 8.31658 22.0976 7.68342 21.7071 7.2929L15.3431 0.928933C14.9526 0.538409 14.3195 0.538409 13.9289 0.928933C13.5384 1.31946 13.5384 1.95262 13.9289 2.34315L19.5858 8L13.9289 13.6569C13.5384 14.0474 13.5384 14.6805 13.9289 15.0711C14.3195 15.4616 14.9526 15.4616 15.3431 15.0711L21.7071 8.70711ZM1 9L21 9L21 7L1 7L1 9Z" fill="white"/>
                                     </svg>
@@ -219,11 +219,13 @@
                     <div class="field-square">
                         <div class="input">
                             <label>Площадь</label>
-                            <input type="text" disabled="true" value="100" oninput="squareValueOnChange(event)" id="square-value">
+                            <input type="text" disabled="true" value="2500" oninput="squareValueOnChange(event)" id="square-value">
                         </div>
-                        <input type="range" min="0" max="200" value="100" oninput="squareRangeOnChange(event)" id="square-range" class="input-range">
+                        <input type="range" min="1000" max="5000" step="500" value="2500" oninput="squareRangeOnChange(event)" id="square-range" class="input-range">
                     </div>
-                    <button class="btn green">получить полный анализ</button>
+                    <a href="#contact" class="btn green smooth-scroll">
+                        получить полный анализ
+                    </a>
                 </div>
 
                 <div class="amount">
@@ -325,16 +327,8 @@
             </div>
 
             <div class="wrapper">
-                <div class="left">
-                    <h2>Экономия на проектировании</h2>
-                    <p>Вы получаете современные дизайн-решения и пространства, которые заточены под бизнес-процессы сервисного офиса (коворкинга)</p>
-                    <ul>
-                        <li>Комплексное проектирование, включающее дизайн, архитектуру, инженерные системы и сети, BIM – проектирование, ускоряющее сроки проектирования, и уменьшающее количество нестыковок и коллизий в реализации</li>
-                        <li>Адаптация под локацию и специфику объекта</li>
-                        <li>Плотное взаимодействие с комплектацией и строительством объекта</li>
-                    </ul>
-                </div>
-                <div class="right">
+                <h2>Экономия на проектировании</h2>
+                <div class="features-wrapper">
                     <div class="price">
                         <p class="old">2 500 ₽ м2</p>
                         <p class="current">1 750 ₽ м2</p>
@@ -354,74 +348,24 @@
                             <b>750 тыс. ₽</b>
                         </div>
                     </div>
+                </div>
+                <div class="info">
+                    <p>Вы получаете современные дизайн-решения и пространства, которые заточены под бизнес-процессы сервисного офиса (коворкинга)</p>
+                    <ul>
+                        <li>Комплексное проектирование, включающее дизайн, архитектуру, инженерные системы и сети, BIM – проектирование, ускоряющее сроки проектирования, и уменьшающее количество нестыковок и коллизий в реализации</li>
+                        <li>Адаптация под локацию и специфику объекта</li>
+                        <li>Плотное взаимодействие с комплектацией и строительством объекта</li>
+                    </ul>
+
+                    <button class="show-more-btn">
+                        подробнее
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7" viewBox="0 0 13 7" fill="none">
+                            <path d="M1 1L6.5 6L12 1" stroke="#EE7E4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
 
-            <div class="wrapper">
-                <div class="left">
-                    <h2>Экономия на IT-решениях</h2>
-                    <p>Вы получаете современные дизайн-решения и пространства, которые заточены под бизнес-процессы сервисного офиса (коворкинга)</p>
-                    <ul>
-                        <li>Комплексное проектирование, включающее дизайн, архитектуру, инженерные системы и сети, BIM – проектирование, ускоряющее сроки проектирования, и уменьшающее количество нестыковок и коллизий в реализации</li>
-                        <li>Адаптация под локацию и специфику объекта</li>
-                        <li>Плотное взаимодействие с комплектацией и строительством объекта</li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <div class="price">
-                        <p class="old">2 500 ₽ м2</p>
-                        <p class="current">1 750 ₽ м2</p>
-                        <span>за весь комплекс услуг</span>
-                    </div>
-                    <div class="features">
-                        <div>
-                            <span>Площадь</span>
-                            <span>Экономия</span>
-                        </div>
-                        <div>
-                            <p>500 м2</p>
-                            <b>375 тыс. ₽</b>
-                        </div>
-                        <div>
-                            <p>1000 м2</p>
-                            <b>750 тыс. ₽</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wrapper">
-                <div class="left">
-                    <h2>Экономия на строительстве</h2>
-                    <p>Вы получаете современные дизайн-решения и пространства, которые заточены под бизнес-процессы сервисного офиса (коворкинга)</p>
-                    <ul>
-                        <li>Комплексное проектирование, включающее дизайн, архитектуру, инженерные системы и сети, BIM – проектирование, ускоряющее сроки проектирования, и уменьшающее количество нестыковок и коллизий в реализации</li>
-                        <li>Адаптация под локацию и специфику объекта</li>
-                        <li>Плотное взаимодействие с комплектацией и строительством объекта</li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <div class="price">
-                        <p class="old">2 500 ₽ м2</p>
-                        <p class="current">1 750 ₽ м2</p>
-                        <span>за весь комплекс услуг</span>
-                    </div>
-                    <div class="features">
-                        <div>
-                            <span>Площадь</span>
-                            <span>Экономия</span>
-                        </div>
-                        <div>
-                            <p>500 м2</p>
-                            <b>375 тыс. ₽</b>
-                        </div>
-                        <div>
-                            <p>1000 м2</p>
-                            <b>750 тыс. ₽</b>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -540,7 +484,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="head">
                 <h1>Оставить заявку</h1>
@@ -640,6 +584,8 @@
             </form>
         </div>
     </div>
+
+    <button id="backToTopBtn" class="btn orange">Наверх</button>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>

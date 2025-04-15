@@ -190,6 +190,65 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedRegions = Array.from(this.querySelectorAll('#regions-list > label >input:checked')).map(item => item.id)
         renderCities(selectedRegions)
     });
+
+    // Скролл фильтра
+    const filterContainer = document.querySelector('.regions .filter');
+    
+    let isDragging = false
+    let startX, scrollLeft;
+
+    const handleMouseDown = (e) => {
+        isDragging = true;
+        startX = e.pageX - filterContainer.offsetLeft;
+        scrollLeft = filterContainer.scrollLeft;
+    }
+
+    const handleMouseLeave = (e) => {
+        if (isDragging) {
+            isDragging = false;
+        }
+    }
+
+    const handleMouseMove = (e) => {        
+        if (!isDragging) return;
+        e.preventDefault();
+        console.log(e.pageX);
+        
+        const x = e.pageX - filterContainer.offsetLeft;
+        const walk = (x - startX) * 2;
+
+        filterContainer.scrollLeft = scrollLeft - walk;
+    }
+
+    const handleOnEnd = () => {
+        isDragging = false;
+    }
+
+    filterContainer.addEventListener('mousedown', handleMouseDown);
+    filterContainer.addEventListener('mouseleave', handleMouseLeave);
+    filterContainer.addEventListener('mousemove', handleMouseMove);
+    filterContainer.addEventListener('mouseup', handleOnEnd);
+
+
+    const handleTouchStart = (e) => {
+        isDragging = true;
+        startX = e.touches[0].pageX - filterContainer.offsetLeft;
+        scrollLeft = filterContainer.scrollLeft;
+        e.preventDefault();
+    };
+
+    const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        const x = e.touches[0].pageX - filterContainer.offsetLeft;
+        const walk = (x - startX) * 2;
+        filterContainer.scrollLeft = scrollLeft - walk;
+        e.preventDefault();
+    };
+
+    filterContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
+    filterContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
+    filterContainer.addEventListener('touchend', handleOnEnd);
+
 });
 
 // Мобильное меню
@@ -225,3 +284,33 @@ document.querySelectorAll('.smooth-scroll').forEach(anchor => {
         }
     });
 });
+
+// Наверх
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.opacity = "1";
+        backToTopBtn.style.pointerEvents = "all";
+    } else {
+        backToTopBtn.style.opacity = "0";
+        backToTopBtn.style.pointerEvents = "none";
+    }
+};
+
+backToTopBtn.onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Раскрытие текста в преимуществах
+document.querySelectorAll('.advantages .show-more-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const container = btn.closest('.info')
+        container.classList.toggle('active')
+    })
+})

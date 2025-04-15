@@ -38,10 +38,10 @@
         background-color: #F2F4F8;
         display: grid;
         grid-template-columns: 810px 1fr;
-        gap: 140px;
+        column-gap: 140px;
     }
 
-    .left {
+    .info {
         > p {
             font-weight: 500;
             margin: 24px 0 50px;
@@ -68,9 +68,29 @@
                 }
             }
         }
+
+        .show-more-btn {
+            display: none;
+            margin-top: 20px;
+            align-items: center;
+            gap: 6px;
+            color: #EE7E4E;
+            font-size: 16px;
+            font-weight: 600;
+
+            svg {
+                transition: all .2s ease;
+            }
+        }
+
+        &.active .show-more-btn svg {
+            transform: rotate(180deg);
+        }
     }
 
-    .right {
+    .features-wrapper {
+        grid-row: span 2;
+
         .price {
             .old {
                 color: #AEAEAE;
@@ -154,10 +174,10 @@
         .wrapper {
             padding: 40px;
             grid-template-columns: 660px 1fr;
-            gap: 80px;
+            column-gap: 80px;
         }
         
-        .left {
+        .info {
             > p {
                 font-size: 20px;
                 max-width: 660px;
@@ -180,7 +200,7 @@
             }
         }
 
-        .right {
+        .features-wrapper {
             .price {
                 .old {
                     font-size: 26px;
@@ -226,11 +246,20 @@
         }
 
         .wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 50px;
+            grid-template-columns: 1fr;
+            gap: 30px;
 
-            .right {
+            .info {
+                &:not(.active) > *:not(.show-more-btn) {
+                    display: none;
+                }
+
+                .show-more-btn {
+                    display: flex;
+                }
+            }
+
+            .features-wrapper {
                 .features {
                     margin-top: 50px;
                 }
@@ -274,7 +303,7 @@
             margin-top: 15px;
             padding: 25px 20px;
 
-            .left {
+            .info {
                 > p, ul {
                     font-size: 15px;
                     line-height: 126%;
@@ -295,7 +324,7 @@
                 }
             }
 
-            .right {
+            .features-wrapper {
                 .price {
                     .old {
                         font-size: 18px;
