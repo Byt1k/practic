@@ -1063,7 +1063,7 @@ p {
 .calculator .wrapper {
   margin-top: 47px;
   display: grid;
-  grid-template: 480px/1fr 420px 420px;
+  grid-template: 500px/1fr 450px 450px;
   gap: 25px;
 }
 .calculator .wrapper .form {
@@ -1085,88 +1085,57 @@ p {
   margin-top: auto;
   width: 410px;
 }
-.calculator .wrapper .amount {
+.calculator .wrapper .result {
   border-radius: 15px;
-  background-color: #FFD5C3;
-  padding: 30px;
   display: flex;
   flex-direction: column;
 }
-.calculator .wrapper .amount > span {
+.calculator .wrapper .result > div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 30px;
+}
+.calculator .wrapper .result > div > div:last-child {
+  margin-top: auto;
+}
+.calculator .wrapper .result .bottom {
+  margin-top: auto;
+  border-radius: inherit;
+}
+.calculator .wrapper .result .bottom * {
+  color: #FFF;
+}
+.calculator .wrapper .result__item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.calculator .wrapper .result__item p {
   font-size: 20px;
   line-height: 110%;
-  display: block;
-  max-width: 255px;
 }
-.calculator .wrapper .amount > h2 {
-  margin-top: 24px;
+.calculator .wrapper .result__item h2 {
+  line-height: 100%;
 }
-.calculator .wrapper .amount > p {
-  margin-top: auto;
-  line-height: 155%;
-  max-width: 280px;
+.calculator .wrapper .result_info {
+  background-color: #FFDED0;
 }
-.calculator .wrapper .amount > p b {
-  font-weight: 600;
-}
-.calculator .wrapper .commission {
-  border-radius: 15px;
+.calculator .wrapper .result_info .bottom {
   background-color: #EE7E4E;
-  display: flex;
-  flex-direction: column;
 }
-.calculator .wrapper .commission h2 {
-  color: #FFF;
+.calculator .wrapper .result_income {
+  background-color: #C1E3D1;
 }
-.calculator .wrapper .commission span {
-  font-size: 20px;
-  color: #FFF;
-}
-.calculator .wrapper .commission p {
-  color: #FFF;
-}
-.calculator .wrapper .commission .head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.calculator .wrapper .commission .part {
-  padding: 30px;
-}
-.calculator .wrapper .commission .part .bonus {
-  margin-top: 40px;
-  padding: 15px;
-  background-color: #FFF;
-  border-radius: 15px;
-}
-.calculator .wrapper .commission .part .bonus > .head {
-  align-items: flex-start;
-}
-.calculator .wrapper .commission .part .bonus h4 {
-  color: #409E6C;
-}
-.calculator .wrapper .commission .part .bonus span {
-  font-size: 16px;
-  color: #242424;
-  display: block;
-  line-height: 138%;
-}
-.calculator .wrapper .commission .part .bonus p {
-  color: #242424;
-  font-weight: 600;
-}
-.calculator .wrapper .commission .full {
-  margin-top: auto;
-  padding: 35px 30px;
+.calculator .wrapper .result_income .bottom {
   background-color: #409E6C;
-  border-radius: inherit;
 }
 
 @media screen and (max-width: 1700px) {
   .calculator .wrapper {
     margin-top: 38px;
     gap: 20px;
-    grid-template: 390px/1fr 340px 340px;
+    grid-template: 400px/1fr 400px 400px;
   }
   .calculator .wrapper .form {
     margin-right: 50px;
@@ -1192,44 +1161,27 @@ p {
   .calculator .wrapper .form .select label, .calculator .wrapper .form .input label {
     font-size: 20px;
   }
-  .calculator .wrapper .amount {
+  .calculator .wrapper .result > div {
     padding: 25px;
   }
-  .calculator .wrapper .amount span {
+  .calculator .wrapper .result__item p {
     font-size: 16px;
-  }
-  .calculator .wrapper .amount p {
-    font-size: 20px;
-    max-width: 230px;
-  }
-  .calculator .wrapper .commission span {
-    font-size: 16px;
-  }
-  .calculator .wrapper .commission p {
-    font-size: 20px;
-    line-height: 155%;
-  }
-  .calculator .wrapper .commission .part {
-    padding: 25px;
-  }
-  .calculator .wrapper .commission .part .bonus span {
-    font-size: 14px;
-    line-height: 110%;
-  }
-  .calculator .wrapper .commission .full {
-    padding: 25px;
   }
 }
 @media screen and (max-width: 1200px) {
   .calculator .wrapper {
-    display: flex;
-    flex-direction: column;
+    grid-template: auto/1fr 1fr;
   }
   .calculator .wrapper .form {
     max-width: 100%;
+    grid-column: span 2;
   }
   .calculator .wrapper .form .btn {
     margin-top: 40px;
+  }
+  .calculator .wrapper .result > div {
+    gap: 25px;
+    padding: 25px 20px;
   }
 }
 @media screen and (max-width: 760px) {
@@ -1237,6 +1189,8 @@ p {
     padding: 70px 0 0;
   }
   .calculator .wrapper {
+    display: flex;
+    flex-direction: column;
     margin-top: 30px;
     gap: 15px;
   }
@@ -1249,36 +1203,6 @@ p {
   }
   .calculator .wrapper .form .btn {
     width: 100%;
-  }
-  .calculator .wrapper .amount {
-    padding: 25px 20px;
-  }
-  .calculator .wrapper .amount span {
-    font-size: 14px;
-  }
-  .calculator .wrapper .amount p {
-    margin-top: 40px;
-    font-size: 16px;
-    line-height: 140%;
-  }
-  .calculator .wrapper .commission span {
-    font-size: 14px;
-    line-height: 110%;
-  }
-  .calculator .wrapper .commission p {
-    font-size: 16px;
-    line-height: 155%;
-  }
-  .calculator .wrapper .commission .part {
-    padding: 25px 20px;
-  }
-  .calculator .wrapper .commission .part .bonus span {
-    line-height: 110%;
-    margin-top: 10px;
-    font-size: 14px;
-  }
-  .calculator .wrapper .commission .full {
-    padding: 25px 20px;
   }
 }
 .sources {

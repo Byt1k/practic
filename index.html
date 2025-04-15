@@ -211,10 +211,7 @@
                 <div class="form">
                     <div class="select">
                         <label>Город</label>
-                        <select class="select">
-                            <option value="">Москва</option>
-                            <option value="">Санкт-Петербург</option>
-                        </select>
+                        <select></select>
                     </div>
                     <div class="field-square">
                         <div class="input">
@@ -228,38 +225,47 @@
                     </a>
                 </div>
 
-                <div class="amount">
-                    <span>предполагаемая сумма контракта</span>
-                    <h2>420 000 ₽/мес</h2>
-                    <p><b>10 рабочих мест</b> на выбранной локации по <b>42 000 ₽/мес</b> </p>
-                </div>
-                
-                <div class="commission">
-                    <div class="part">
-                        <div class="head">
-                            <div>
-                                <h2>504 000 ₽</h2>
-                                <span>базовая комиссия</span>
-                            </div>
-                            <p>8,33%</p>
+                <div class="result result_info">
+                    <div class="top">
+                        <div class="result__item">
+                            <p>локаций в регионе</p>
+                            <h2 id="result-locations"></h2>
                         </div>
-                        <div class="bonus">
-                            <div class="head">
-                                <div>
-                                    <h4>+ 30 000 ₽</h4>
-                                    <span>бонус за 2 обеспечительных платежа (не в зачет аренды)</span>
-                                </div>
-                                <p>1%</p>
-                            </div>
+                        <div class="result__item">
+                            <p>дата открытия первого</p>
+                            <h2 id="result-createdAt"></h2>
                         </div>
                     </div>
-                    <div class="full">
-                        <div class="head">
-                            <div>
-                                <h2>534 000 ₽</h2>
-                                <span>полная комиссия</span>
-                            </div>
-                            <p>9,33%</p>
+                    <div class="bottom">
+                        <div class="result__item">
+                            <p>объем инвестиций в локацию всего</p>
+                            <h2 id="result-invest-all"></h2>
+                        </div>
+                        <div class="result__item">
+                            <p>объем инвестиций на 1 кв.м</p>
+                            <h2 id="result-invest-meter"></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="result result_income">
+                    <div class="top">
+                        <div class="result__item">
+                            <p>cрок возврата инвестиций, в мес</p>
+                            <h2 id="result-payback"></h2>
+                        </div>
+                        <div class="result__item">
+                            <p>рентабельность (ROI)</p>
+                            <h2 id="result-roi"></h2>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="result__item">
+                            <p>выручка в месяц</p>
+                            <h2 id="result-revenue"></h2>
+                        </div>
+                        <div class="result__item">
+                            <p>расходы в месяц</p>
+                            <h2 id="result-expenses"></h2>
                         </div>
                     </div>
                 </div>
@@ -491,35 +497,38 @@
                 <p>Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
                 <img src="./img/form-image.png" alt="coworking">
             </div>
-            <div class="form">
+            <form class="form">
+                <input type="hidden" name="subjFF" value="Сообщение из формы на invest.praktik.work">
+
                 <h2>
                     Заполните форму <br>
                     для получения предложения
                 </h2>
                 <div class="input">
                     <label>Ваше имя*</label>
-                    <input type="text" placeholder="Иванов Иван Иванович">
+                    <input type="text" placeholder="Иванов Иван Иванович" name="name" required>
                 </div>
                 <div class="input">
                     <label>Телефон*</label>
-                    <input type="text" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ">
+                    <input type="tel" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ" name="telFF" required>
                 </div>
                 <div class="input">
                     <label>Почта</label>
-                    <input type="text" placeholder="example@gmail.com">
+                    <input type="email" placeholder="example@gmail.com" name="emailFF">
                 </div>
                 <div class="select">
                     <label>Город*</label>
-                    <select>
+                    <select name="cityFF" required>
                         <option value="">Москва</option>
                         <option value="">Санкт-Петербург</option>
+                        <option value="">Новосибирск</option>
                     </select>
                 </div>
                 <div class="action">
-                    <button class="btn yellow">Получить предложение</button>
+                    <button class="btn yellow" typ="submit">Получить предложение</button>
                     <p>Нажимая кнопку Оставить заявку, вы соглашаетесь с <b>политикой обработки персональных данных</b></p>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 
@@ -557,30 +566,33 @@
                 </div>
             </div>
             <form class="form">
+                <input type="hidden" name="subjFF" value="Сообщение из формы на invest.praktik.work">
+
                 <h1>Оставить заявку</h1>
                 <p>Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
                 <div class="grid">
                     <div class="input">
-                        <input type="text" placeholder="Ваше имя*">
+                        <input type="text" placeholder="Ваше имя*" name="name" required>
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Телефон*">
+                        <input type="tel" placeholder="Телефон*" name="telFF" required>
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Почта*">
+                        <input type="email" placeholder="Почта*" name="emailFF" required>
                     </div>
                     <div class="select">
-                        <select>
+                        <select name="cityFF">
                             <option>Москва</option>
                             <option>Санкт-Петербург</option>
+                            <option>Новосибирск</option>
                         </select>
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Комментарий">
+                        <input type="text" placeholder="Комментарий" name="messageFF">
                     </div>
                 </div>
                 <span>Нажимая кнопку Оставить заявку, вы соглашаетесь с <b>политикой обработки персональных данных</b></span>
-                <button class="btn yellow">Оставить заявку</button>
+                <button class="btn yellow" type="submit">Оставить заявку</button>
             </form>
         </div>
     </div>
@@ -588,6 +600,7 @@
     <button id="backToTopBtn" class="btn orange">Наверх</button>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/calculator.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

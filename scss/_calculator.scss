@@ -4,7 +4,7 @@
     .wrapper {
         margin-top: 47px;
         display: grid;
-        grid-template: 480px / 1fr 420px 420px;
+        grid-template: 500px / 1fr 450px 450px;
         gap: 25px;
         
         .form {
@@ -30,99 +30,60 @@
             }
         }
 
-        .amount {
+        .result {
             border-radius: 15px;
-            background-color: #FFD5C3;
-            padding: 30px;
             display: flex;
             flex-direction: column;
 
-            > span {
-                font-size: 20px;
-                line-height: 110%;
-                display: block;
-                max-width: 255px;
-            }
-
-            > h2 {
-                margin-top: 24px;
-            }
-
-            > p {
-                margin-top: auto;
-                line-height: 155%;
-                max-width: 280px;
-
-                b {
-                    font-weight: 600;
-                }
-            }
-        }
-
-        .commission {
-            border-radius: 15px;
-            background-color: #EE7E4E;
-            display: flex;
-            flex-direction: column;
-
-            h2 {
-                color: #FFF;
-            }
-
-            span {
-                font-size: 20px;
-                color: #FFF;
-            }
-
-            p {
-                color: #FFF;
-            }
-
-            .head {
+            > div {
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-            }
-
-
-            .part {
+                flex-direction: column;
+                flex-grow: 1;
                 padding: 30px;
 
-                .bonus {
-                    margin-top: 40px;
-                    padding: 15px;
-                    background-color: #FFF;
-                    border-radius: 15px;
-
-                    > .head {
-                        align-items: flex-start;
-                    }
-
-                    h4 {
-                        color: #409E6C;
-                    }
-
-                    span {
-                        font-size: 16px;
-                        color: #242424;
-                        display: block;
-                        line-height: 138%;
-                    }
-
-                    p {
-                        color: #242424;
-                        font-weight: 600;
-                    }
+                > div:last-child {
+                    margin-top: auto;
                 }
             }
 
-            .full {
+            .bottom {
                 margin-top: auto;
-                padding: 35px 30px;
-                background-color: #409E6C;
                 border-radius: inherit;
 
+                 * {
+                    color: #FFF;
+                }
+            }
 
+            &__item {
+                display: flex;
+                flex-direction: column;
+                gap: 7px;    
+
+                p {
+                    font-size: 20px;
+                    line-height: 110%;
+                }
+
+                h2 {
+                    line-height: 100%;
+                }
+            }
+
+            &_info {
+                background-color: #FFDED0;
+
+                .bottom {
+                    background-color: #EE7E4E;
+                }
+            }
+
+            &_income {
+                background-color: #C1E3D1;
+
+                .bottom {
+                    background-color: #409E6C;
+                }
             }
         }
     }
@@ -133,7 +94,7 @@
         .wrapper {
             margin-top: 38px;
             gap: 20px;
-            grid-template: 390px / 1fr 340px 340px;
+            grid-template: 400px / 1fr 400px 400px;
 
             .form {
                 margin-right: 50px;
@@ -170,42 +131,15 @@
                 }
             }
 
-            .amount {
-                padding: 25px;
-
-                span {
-                    font-size: 16px;
-                }
-
-                p {
-                    font-size: 20px;
-                    max-width: 230px;
-                }
-            }
-
-            .commission {
-                span {
-                    font-size: 16px;
-                }
-
-                p {
-                    font-size: 20px;
-                    line-height: 155%;
-                }
-
-                .part {
+            .result {
+                > div {
                     padding: 25px;
+                }
 
-                    .bonus {
-                        span {
-                            font-size: 14px;
-                            line-height: 110%;
-                        }
+                &__item {
+                    p {
+                        font-size: 16px;
                     }
-                }
-
-                .full {
-                    padding: 25px;
                 }
             }
         }
@@ -215,14 +149,21 @@
 @media screen and (max-width: 1200px) {
     .calculator {
         .wrapper {
-            display: flex;
-            flex-direction: column;
+            grid-template: auto / 1fr 1fr;
 
             .form {
                 max-width: 100%;
+                grid-column: span 2;
 
                 .btn {
                     margin-top: 40px;
+                }
+            }
+
+            .result {
+                > div {
+                    gap: 25px;
+                    padding: 25px 20px;
                 }
             }
         }
@@ -234,6 +175,8 @@
         padding: 70px 0 0;
 
         .wrapper {
+            display: flex;
+            flex-direction: column;
             margin-top: 30px;
             gap: 15px;
 
@@ -247,48 +190,6 @@
 
                 .btn {
                     width: 100%;
-                }
-            }
-
-            .amount {
-                padding: 25px 20px;
-
-                span {
-                    font-size: 14px;
-                }
-
-                p {
-                    margin-top: 40px;
-                    font-size: 16px;
-                    line-height: 140%;
-                }
-            }
-
-            .commission {
-                span {
-                    font-size: 14px;
-                    line-height: 110%;
-                }
-
-                p {
-                    font-size: 16px;
-                    line-height: 155%;
-                }
-
-                .part {
-                    padding: 25px 20px;
-
-                    .bonus {
-                        span {
-                            line-height: 110%;
-                            margin-top: 10px;
-                            font-size: 14px;
-                        }
-                    }
-                }
-
-                .full {
-                    padding: 25px 20px;
                 }
             }
         }

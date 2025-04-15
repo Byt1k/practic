@@ -88,21 +88,6 @@ document.querySelectorAll('.input-range').forEach(input => {
     updateProgress();
 });
 
-
-// calculator
-const squareValueEl = document.getElementById('square-value');
-const squareRangeEl = document.getElementById('square-range');
-
-function squareRangeOnChange(e) {
-    squareValueEl.value = e.target.value;
-}
-
-function squareValueOnChange(e) {
-    let value = Math.max(squareRangeEl.min, Math.min(squareRangeEl.max, e.target.value));
-    squareRangeEl.value = value;
-    squareValueEl.value = value;
-}
-
 //popup
 const popupEl = document.getElementById('popup')
 
