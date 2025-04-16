@@ -78,7 +78,7 @@
         <div class="container">
             <h1>Франшиза коворкинга <br>/ сервисного офиса</h1>
             <p>Коворкинги — один из наиболее быстро развивающихся сегментов в коммерческой недвижимости.</p>
-            <button class="btn yellow" onclick="toggleOpenPopup()">
+            <button class="btn yellow" onclick="openPopup()">
                 Оставить заявку
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
@@ -220,9 +220,9 @@
                         </div>
                         <input type="range" min="1000" max="5000" step="500" value="2500" oninput="squareRangeOnChange(event)" id="square-range" class="input-range">
                     </div>
-                    <a href="#contact" class="btn green smooth-scroll">
+                    <button class="btn green">
                         получить полный анализ
-                    </a>
+                    </button>
                 </div>
 
                 <div class="result result_info">
@@ -516,13 +516,9 @@
                     <label>Почта</label>
                     <input type="email" placeholder="example@gmail.com" name="emailFF">
                 </div>
-                <div class="select">
-                    <label>Город*</label>
-                    <select name="cityFF" required>
-                        <option value="">Москва</option>
-                        <option value="">Санкт-Петербург</option>
-                        <option value="">Новосибирск</option>
-                    </select>
+                <div class="input">
+                    <label>Город</label>
+                    <input type="text" placeholder="Москва" name="cityFF">
                 </div>
                 <div class="action">
                     <button class="btn yellow" typ="submit">Получить предложение</button>
@@ -550,6 +546,8 @@
         </div>
     </footer>
 
+    <button id="backToTopBtn" class="btn orange">Наверх</button>
+
     <div class="popup" id="popup">
         <div class="container">
             <div class="head">
@@ -557,7 +555,7 @@
                 <div class="actions">
                     <a href="mailto:info@praktik.work" class="btn outlined">info@praktik.work</a>
                     <a href="telto:+1 234 567-89-00" class="btn outlined">+1 234 567-89-00</a>
-                    <button class="btn white" onclick="toggleOpenPopup()">
+                    <button class="btn white" onclick="closePopup()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                             <path d="M11.5 13.3417L6.80418 18.0375C6.62849 18.2132 6.40488 18.301 6.13335 18.301C5.86182 18.301 5.63821 18.2132 5.46252 18.0375C5.28682 17.8618 5.19897 17.6382 5.19897 17.3667C5.19897 17.0951 5.28682 16.8715 5.46252 16.6958L10.1583 12L5.46252 7.30417C5.28682 7.12847 5.19897 6.90486 5.19897 6.63333C5.19897 6.36181 5.28682 6.1382 5.46252 5.9625C5.63821 5.78681 5.86182 5.69896 6.13335 5.69896C6.40488 5.69896 6.62849 5.78681 6.80418 5.9625L11.5 10.6583L16.1958 5.9625C16.3715 5.78681 16.5952 5.69896 16.8667 5.69896C17.1382 5.69896 17.3618 5.78681 17.5375 5.9625C17.7132 6.1382 17.8011 6.36181 17.8011 6.63333C17.8011 6.90486 17.7132 7.12847 17.5375 7.30417L12.8417 12L17.5375 16.6958C17.7132 16.8715 17.8011 17.0951 17.8011 17.3667C17.8011 17.6382 17.7132 17.8618 17.5375 18.0375C17.3618 18.2132 17.1382 18.301 16.8667 18.301C16.5952 18.301 16.3715 18.2132 16.1958 18.0375L11.5 13.3417Z" fill="#242424"/>
                         </svg>
@@ -580,15 +578,11 @@
                     <div class="input">
                         <input type="email" placeholder="Почта*" name="emailFF" required>
                     </div>
-                    <div class="select">
-                        <select name="cityFF">
-                            <option>Москва</option>
-                            <option>Санкт-Петербург</option>
-                            <option>Новосибирск</option>
-                        </select>
+                    <div class="input">
+                        <input type="text" placeholder="Город" name="cityFF" id="popup-city-input">
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Комментарий" name="messageFF">
+                        <input type="text" placeholder="Комментарий" name="messageFF" id="popup-message-input">
                     </div>
                 </div>
                 <span>Нажимая кнопку Оставить заявку, вы соглашаетесь с <b>политикой обработки персональных данных</b></span>
@@ -597,10 +591,9 @@
         </div>
     </div>
 
-    <button id="backToTopBtn" class="btn orange">Наверх</button>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/calculator.js"></script>
+    <script src="js/regions.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
