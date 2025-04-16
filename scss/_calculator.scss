@@ -94,10 +94,11 @@
         .wrapper {
             margin-top: 38px;
             gap: 20px;
-            grid-template: 400px / 1fr 400px 400px;
+            grid-template: 400px / 1fr 370px 370px;
+            max-width: 100%;
 
             .form {
-                margin-right: 50px;
+                margin-right: 15px;
 
                 .select {
                     select {
@@ -128,6 +129,10 @@
                     label {
                         font-size: 20px;
                     }
+                }
+
+                .btn {
+                    width: 100%;
                 }
             }
 
