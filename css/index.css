@@ -138,7 +138,7 @@ p {
   gap: 20px;
 }
 .select::after {
-  content: url("../img/dropdown-arrow.svg");
+  content: url("/assets/img/my/dropdown-arrow.svg");
   display: block;
   position: absolute;
   bottom: 27px;
@@ -639,7 +639,7 @@ p {
   padding-bottom: 20px;
 }
 .main .container {
-  background: url("./../img/main-bg.png") no-repeat center/cover;
+  background: url("/assets/img/my/main-bg.png") no-repeat center/cover;
   padding: 393px 60px 60px;
   border-radius: 46px;
 }
@@ -691,7 +691,7 @@ p {
 @media screen and (max-width: 760px) {
   .main .container {
     padding: 355px 15px 30px;
-    background-image: url(../img/main-bg-mobile.png);
+    background-image: url(/assets/img/my/main-bg-mobile.png);
   }
   .main p {
     font-size: 15px;
@@ -1715,7 +1715,7 @@ p {
 }
 .regions {
   padding: 100px 0;
-  background: url(../img/map.png) no-repeat right 100px/contain;
+  background: url(/assets/img/my/map.png) no-repeat right top/contain;
 }
 .regions .wrapper {
   margin-top: 48px;
@@ -1801,7 +1801,7 @@ p {
 .regions .wrapper .result .city {
   border-radius: 20px;
   background-color: #F2F4F8;
-  padding: 25px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1811,8 +1811,11 @@ p {
   align-items: center;
   gap: 10px;
   color: var(--1, #242424);
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 500;
+}
+.regions .wrapper .result .city > div > img {
+  max-width: 30px;
 }
 .regions .wrapper .result .city > button {
   font-size: 20px;
@@ -1876,7 +1879,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 70px;
   border-radius: 15px;
   background-color: #F2F4F8;
 }
@@ -1904,7 +1907,7 @@ p {
   }
   .residents__item {
     height: 130px;
-    padding: 20px;
+    padding: 30px;
   }
   .residents__item:last-child {
     margin-top: 10px;
